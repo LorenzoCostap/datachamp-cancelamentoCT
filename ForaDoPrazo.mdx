@@ -1,0 +1,94 @@
+# Cancelamento de CT-e Fora do Prazo
+
+## Passo a Passo
+
+1. Emitir uma NF-e de Entrada utilizando a CFOP:
+```
+E.206
+```
+
+2. Realizar os cadastros necessários:
+   - Matriz Tributária;
+   - Operação Tributária;
+   - Série de Documentos;
+   - Item "Estorno de Frete".
+
+3. Emitir a NF-e como **Entrada**.
+
+4. Informar o mesmo cliente do CT-e que será estorno.
+
+5. No campo **Doc. Ref.**, informar a chave do CT-e.
+
+6. Informar com valor da NF-e o valor a ser estornado.
+
+---
+
+## Clientes que já realizaram este processo
+
+-TransValdir;
+-Dm Tur.
+
+---
+
+# Operação Débito de ICMS
+
+## Configuração
+
+### Operação Tributária
+
+- Tipo : **Ajuste**
+
+### Item
+
+- Crédito de ICMS
+
+### Informações
+
+1. Informar valor do item igual a:
+
+```
+0,00
+```
+
+2. Nos detalhes do item informar o valor correspondente ao ICMS.
+
+---
+
+# Produção Sob Demanda
+
+## Passo a Passo
+
+1. Acesse
+
+```
+Estoque → Conferência
+```
+
+2. Pesquise por:
+
+```
+Saldo Menor que Zero
+```
+
+3. Clique em:
+```
+Opções → Produção Sob Demanda
+```
+
+4. Clique em:
+
+```
+Opçõ~es → Zerar Saldo
+```
+
+5. Realize novamente a pesquisa:
+
+```
+Saldo Menor que Zero
+```
+
+6. Clique em:
+
+```
+Opções → Transferir Saldo
+```
