@@ -2,31 +2,21 @@
 
 ## Passo a Passo
 
-1. Emitir uma NF-e de Entrada utilizando a CFOP:
-```
-E.206
-```
-
-2. Realizar os cadastros necessários:
+1. Emitir uma NF-e de Entrada utilizando a CFOP **E.206**.
+2. Realizar os seguintes cadastros:
    - Matriz Tributária;
    - Operação Tributária;
    - Série de Documentos;
    - Item "Estorno de Frete".
-
 3. Emitir a NF-e como **Entrada**.
-
-4. Informar o mesmo cliente do CT-e que será estorno.
-
+4. Informar o mesmo cliente do CT-e que será estornado.
 5. No campo **Doc. Ref.**, informar a chave do CT-e.
+6. Informar na NF-e o valor a ser estornado.
 
-6. Informar com valor da NF-e o valor a ser estornado.
+### Clientes que já realizaram esta operação
 
----
-
-## Clientes que já realizaram este processo
-
--TransValdir;
--Dm Tur.
+- TransValdir
+- DM Tur
 
 ---
 
@@ -34,23 +24,15 @@ E.206
 
 ## Configuração
 
-### Operação Tributária
+**Operação Tributária**
+- Tipo: Ajuste
 
-- Tipo : **Ajuste**
-
-### Item
-
+**Item**
 - Crédito de ICMS
 
-### Informações
-
-1. Informar valor do item igual a:
-
-```
-0,00
-```
-
-2. Nos detalhes do item informar o valor correspondente ao ICMS.
+**Informações**
+- Informar valor do item igual a **R$ 0,00**.
+- Nos detalhes do item informar o valor correspondente ao ICMS.
 
 ---
 
@@ -58,37 +40,105 @@ E.206
 
 ## Passo a Passo
 
-1. Acesse
+1. Acessar **Estoque > Conferência**.
+2. Pesquisar por **Saldo Menor que Zero**.
+3. Selecionar **Opções > Produção Sob Demanda**.
+4. Selecionar **Opções > Zerar Saldo**.
+5. Pesquisar novamente por **Saldo Menor que Zero**.
+6. Selecionar **Opções > Transferir Saldo**.
 
-```
-Estoque → Conferência
-```
+---
 
-2. Pesquise por:
+# Certificado Digital
 
-```
-Saldo Menor que Zero
-```
+## Passo a Passo
 
-3. Clique em:
-```
-Opções → Produção Sob Demanda
-```
+Com o certificado já baixado:
 
-4. Clique em:
+1. Renomear o arquivo com o nome e a senha do cliente.
+2. Fazer o upload no Sentus:
 
-```
-Opçõ~es → Zerar Saldo
-```
+   **Administrativo > Certificado > Upload**
 
-5. Realize novamente a pesquisa:
+3. Clicar em:
+   - Testar;
+   - Salvar.
+4. Enviar o certificado para o contador por e-mail.
+5. Salvar uma cópia na pasta do cliente localizada no pendrive.
 
-```
-Saldo Menor que Zero
-```
+---
 
-6. Clique em:
+# Permissões
 
-```
-Opções → Transferir Saldo
-```
+## Configuração
+
+No Sentus Master:
+
+1. Acessar **Administrativo > Tenants**.
+2. Encontrar a tenant desejada.
+3. Clicar na engrenagem localizada à direita.
+4. Configurar as permissões.
+
+> As permissões devem ser configuradas da mesma forma em ambas as tenants.
+
+---
+
+# Movimentação Interna
+
+## Passo a Passo
+
+1. Acessar **Estoque > Lançamentos**.
+2. Selecionar **Opções > Movimentações Internas**.
+3. Informar:
+   - **Origem:** item que sofrerá baixa no estoque.
+   - **Destino:** item que receberá acréscimo no estoque.
+
+---
+
+# Desconto e Comissão
+
+## Caminho
+
+**Cadastros > Representantes > Mais Ações > Informações Comerciais**
+
+---
+
+# Banco / Dinheiro
+
+## Situação
+
+Quando o pagamento estava previsto para ocorrer via banco, mas foi realizado em dinheiro.
+
+## Procedimento
+
+1. Acessar **Financeiro > Títulos a Receber**.
+2. Alterar o portador para **Carteira**.
+3. Liquidar o título.
+
+> O cliente deverá entrar em contato com o banco para solicitar a baixa da cobrança.
+
+---
+
+# Conferência de Estoque
+
+## Passo a Passo
+
+1. Acessar **Estoque > Conferência**.
+2. Informar a posição correspondente ao último dia do mês anterior.
+3. Filtrar por **Saldo Menor que Zero**.
+
+---
+
+# Relatório de Estoque
+
+## Caminho
+
+**Estoque > Relatórios > Inventário por Grupo**
+
+---
+
+# Auditoria de Notas de Entrada
+
+## Passo a Passo
+
+1. Acessar **Suprimentos > Notas de Entrada**.
